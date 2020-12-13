@@ -52,6 +52,29 @@ https://www.youtube.com/watch?v=rwmZMjWpPYc&ab_channel=LeighHalliday
 
 
 ### [이거](https://github.com/Road-of-CODEr/we-hate-js/blob/master/Front-End/Next.js/basicFeatures/dataFetching/getServerSideProps.md)
-next/link, next/router 를 통해 클라이언트 사이드에서 서버사이드렌더링 페이지로 접근할 경우 Next.js 는 API 를 서버로 보내고 getServerSideProps 가 실행되어 결과 값을 포함한 JSON 파일을 내려준다. 그 후 JSON 파일은 페이지에서 렌더링 된다.(props) 모든 작업은 Next.js 에서 자동으로 관리한다. 따라서 getServerSideProps 이외의 것들은 설정할 필요가 없다.
 
-Next는 json을 보내주는거고, html은 js파일 형태로 만들어 놓고 있는거다(빨리 그릴수있게..!) 아직 더 공부할게 많은거같다. 
+next/link는 연결된 페이지를 prefetch한다. 관려해서 내용이 잘 이해가 안되서 찾아봤더니 아래의 글을 찾을 수 있었다. 
+
+https://web.dev/route-prefetching-in-nextjs/
+
+아래는 index.html , about.js 파일이다. \
+<img src="./assets/3.png" width="300">
+
+<img src="./assets/4.png" width="300">
+
+console.log 를 통해서 언제 서버에 요청해서 페이지를 가져오는지 파악해봤다. 
+
+<img src="./assets/5.png" width="300"> 
+이렇게 javascript를 disable 하면 about을 선택하면 서버에 다시 페이지를 요청해서 로그가 아래처럼 찍힌다. 
+
+<img src="./assets/6.png" width="300"> 
+
+근데 js가 켜져있을땐, 서버에 요청안하고 client에서 처리가 된다. 
+
+<img src="./assets/7.png" width="300"> 
+
+<img src="./assets/8.png" width="300"> 
+
+이렇게 보인다. 
+
+
